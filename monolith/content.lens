@@ -1,0 +1,170 @@
+<koken:include file="layouts/header.html" />
+
+	<section id="main">
+		<div class="container">
+			<koken:load infinite="true">
+
+				<koken:head>
+					<meta property="og:site_name" content="{{ site.title }}" />
+					<meta property="og:title" content="{{ content.title|content.filename strip_html="true" }}" />
+					<meta property="og:description" content="{{ content.caption strip_html="true" }}" />
+					<meta property="og:type" content="website" />
+					<meta property="og:image" content="{{ content.presets.medium_large.url }}" />
+					<meta property="og:image:width" content="{{ content.presets.medium_large.width }}" />
+					<meta property="og:image:height" content="{{ content.presets.medium_large.height }}" />
+					<meta property="og:url" content="{{ content.url }}" />
+				</koken:head>
+
+				<div class="row">
+					<div class="col-sm-8">
+						<koken:link lightbox="true" title="View in lightbox">
+							<koken:content_image>
+								<koken:img />
+							</koken:content_image>
+							<koken:content_video>
+								<koken:video />
+							</koken:content_video>
+						</koken:link>
+					</div>
+					<div class="col-sm-4 text-right">
+						<div class="content-title">
+							<h1>{{ content.title | content.filename }}</h1>
+						</div>
+						{{ content.caption paragraphs="true" }}
+						<koken:if true="settings.content_properties">
+							<div class="content-title">
+								<h2>Image Properties</h2>
+							</div>
+							<div class="cptable">
+								<koken:if true="settings.content_datecaptured">
+									<div class="cptr">
+										<div class="cptd">
+											<strong>Captured On:</strong>
+										</div>
+										<div class="cptd">
+											{{ content.captured_on date_only="true" }}
+										</div>
+									</div>
+								</koken:if>
+								<koken:if true="settings.content_categories">
+									<koken:categories>
+										<div class="cptr">
+											<div class="cptd">
+												<strong>Category:</strong>
+											</div>
+											<div class="cptd">
+												<koken:loop separator=", ">
+													<koken:link title="View all images in {{ category.title }}">
+														{{ category.title }}
+													</koken:link>
+												</koken:loop>
+											</div>
+										</div>
+									</koken:categories>
+								</koken:if>
+								<koken:if true="settings.content_tags">
+									<koken:tags>
+										<div class="cptr">
+											<div class="cptd">
+												<strong>Tags:</strong>
+											</div>
+											<div class="cptd">
+												<koken:loop separator=", ">
+													<koken:link class="tag" title="View all images in {{ tag.title }}">#{{ tag.title }}</koken:link>
+												</koken:loop>
+											</div>
+										</div>
+									</koken:tags>
+								</koken:if>
+								<koken:exif>
+									<koken:if true="settings.content_model">
+										<koken:not empty="exif.model">
+											<div class="cptr">
+												<div class="cptd">
+													<strong>Camera:</strong>
+												</div>
+												<div class="cptd">
+													{{ exif.model }}
+												</div>
+											</div>
+										</koken:not>
+									</koken:if>
+									<koken:if true="settings.content_aperture">
+										<koken:not empty="exif.aperture">
+											<div class="cptr">
+												<div class="cptd">
+													<strong>Aperture:</strong>
+												</div>
+												<div class="cptd">
+													{{ exif.aperture }}
+												</div>
+											</div>
+										</koken:not>
+									</koken:if>
+									<koken:if true="settings.content_exposure">
+										<koken:not empty="exif.exposure">
+											<div class="cptr">
+												<div class="cptd">
+													<strong>Exposure:</strong>
+												</div>
+												<div class="cptd">
+													{{ exif.exposure }}
+												</div>
+											</div>
+										</koken:not>
+									</koken:if>
+									<koken:if true="settings.content_focallength">
+										<koken:not empty="exif.focal_length">
+											<div class="cptr">
+												<div class="cptd">
+													<strong>Focal length:</strong>
+												</div>
+												<div class="cptd">
+													{{ exif.focal_length }}
+												</div>
+											</div>
+										</koken:not>
+									</koken:if>
+									<koken:if true="settings.content_iso">
+										<koken:not empty="exif.iso_speed_ratings">
+											<div class="cptr">
+												<div class="cptd">
+													<strong>ISO:</strong>
+												</div>
+												<div class="cptd">
+													{{ exif.iso_speed_ratings }}
+												</div>
+											</div>
+										</koken:not>
+									</koken:if>
+								</koken:exif>
+							</div>
+						</koken:if>
+						<koken:if true="settings.social_twitter">
+							<koken:link share="twitter" class="btn-social btn-twitter"><i class="fa fa-twitter"></i>Tweet</koken:link>
+						</koken:if>
+						<koken:if true="settings.social_facebook">
+							<koken:link share="facebook" class="btn-social btn-facebook"><i class="fa fa-facebook-official"></i>Share</koken:link>
+						</koken:if>
+						<koken:if true="settings.social_pinterest">
+							<koken:link share="pinterest" class="btn-social btn-pinterest"><i class="fa fa-pinterest"></i>Save</koken:link>
+						</koken:if>
+						<koken:if true="settings.social_googleplus">
+							<koken:link share="google-plus" class="btn-social btn-google-plus"><i class="fa fa-google-plus"></i>Share</koken:link>
+						</koken:if>
+						<koken:if true="settings.social_tumblr">
+							<koken:link share="tumblr" class="btn-social btn-tumblr"><i class="fa fa-tumblr"></i>Share</koken:link>
+						</koken:if>
+					</div>
+				</div>
+				
+			<koken:else>
+				<koken:include file="layouts/error.html" />
+				<koken:note>
+				  No image found
+				</koken:note>
+			</koken:load>
+		</div>
+	</section>
+
+<koken:include file="layouts/footer.html" />

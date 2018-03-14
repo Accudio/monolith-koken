@@ -1,0 +1,10 @@
+#header .navbar-default, #footer .footer-bottom, .back-to-top, #header .header-menu.in {background-color: #201E1F;}
+#header .navbar-default .k-nav-root>li>.k-nav-current, #header .navbar-default .k-nav-root a:hover, #header .navbar-default .k-nav-root>li>.k-nav-current:hover {background-color: #fbfbfb;border-top: 0.1875rem double #dddddd;}
+#header .navbar-default .k-nav-root>li>a {color: #ffffff;}
+#header .navbar-default, #footer .footer-bottom, .back-to-top, #header .header-menu.in {background-color: #201E1F;}
+a, a:focus, a:hover, #header .navbar-default .k-nav-root a:hover, #header .navbar-default .k-nav-root>li>.k-nav-current:hover, #header .navbar-default .k-nav-root>li>.k-nav-current {color: #3a7e8e;}
+@media (min-width: 1200px) {
+	body.boxed {background: url(../img/photography.png) #fafafa;}
+	body.boxed #all {width: 1150px;}
+}
+#footer .footer-bottom {color: #ffffff;}

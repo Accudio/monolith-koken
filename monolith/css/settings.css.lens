@@ -1,0 +1,27 @@
+#header .navbar-default, #footer .footer-bottom, .back-to-top, #header .header-menu.in {
+    background-color: $theme_colour;
+}
+#header .navbar-default .k-nav-root>li>.k-nav-current, #header .navbar-default .k-nav-root a:hover, #header .navbar-default .k-nav-root>li>.k-nav-current:hover {
+	background-color: $navactive_colour;
+	border-top: 0.1875rem double $navactiveborder_colour;
+}
+#header .navbar-default .k-nav-root>li>a {
+	color: $themetext_colour;
+}
+#footer .footer-bottom {
+	color: $themetext_colour;
+}
+a, a:focus, a:hover, #header .navbar-default .k-nav-root a:hover, #header .navbar-default .k-nav-root>li>.k-nav-current:hover, #header .navbar-default .k-nav-root>li>.k-nav-current {
+	color: $link_colour;
+}
+.form-control:focus {
+	border-color: $link_colour;
+}
+.btn:hover, .k-contact-form-submit>button {
+	background-color: $link_colour;
+}
+@media (min-width: 1200px) {
+	body.boxed {
+		background: $background_pattern $background_colour;
+	}
+}

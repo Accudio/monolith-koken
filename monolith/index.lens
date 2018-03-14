@@ -1,0 +1,115 @@
+<koken:include file="layouts/header.html" />
+
+	<section id="main" class="home">
+		<div class="container">
+			<koken:not data="settings.index_header" equals="none">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<koken:if data="settings.index_header" equals="custom">
+							<koken:not empty="settings.index_customheader">
+								<h1>{{ settings.index_customheader }}</h1>
+							<koken:else>
+								<koken:note>
+									Enter custom header text in template settings
+								</koken:note>
+							</koken:not>
+						</koken:if>
+						<koken:if data="settings.index_header" equals="welcome">
+							<h1>Welcome to {{ site.title }}</h1>
+						</koken:if>
+					</div>
+				</div>
+			</koken:not>
+			<koken:if true="settings.index_slideshow">
+				<div class="row">
+					<div id="slider" class="col-md-12 text-center">
+
+						<koken:load>
+							<koken:pulse size="3:1" crop="fill" jsvar="pulse" previous="#pulse-prev" toggle="#pulse-play" fullscreen="#pulse-fs" next="#pulse-next"/>
+							<koken:if true="settings.slideshow_controls">
+								<div class="pulse-control text-center">
+									<ul class="list-inline">
+										<li class="list-inline-item">
+											<a href="#" id="pulse-prev" data-bind-to-key="left">
+												<i class="fa fa-chevron-left"></i><span class="sr-only">Previous</span>
+											</a>
+										</li>
+										<li class="list-inline-item">
+											<a href="#" id="pulse-play" data-bind-to-key="space">
+												<i class="fa fa-pause"></i><span class="sr-only">Pause</span>
+											</a>
+										</li>
+										<koken:if true="settings.slideshow_fullscreen">
+											<li class="list-inline-item">
+												<a href="#" id="pulse-fs">
+													<i class="fa fa-expand"></i><span class="sr-only">Fullscreen</span>
+												</a>
+											</li>
+										</koken:if>
+										<li class="list-inline-item">
+											<a href="#" id="pulse-next" data-bind-to-key="right">
+												<i class="fa fa-chevron-right"></i><span class="sr-only">Next</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</koken:if>
+						<koken:else>
+							<koken:note>
+								No featured content found
+							</koken:note>
+						</koken:load>
+
+					</div>
+				</div>
+			</koken:if>
+			<koken:if true="settings.custom_content">
+				<div class="row">
+					<div class="text-center home-text">
+						<koken:not empty="settings.custom_pageid">
+							<koken:load source="page" filter:id="{{ settings.custom_pageid }}">
+								<h1>{{ page.title }}</h1>
+								{{ page.content }}
+							<koken:else>
+								Content not found for supplied page id
+							</koken:load>
+						<koken:else>
+							<koken:note>
+								For custom content, please set page id in Template Settings
+							</koken:note>
+						</koken:not>
+					</div>
+				</div>
+			</koken:if>
+			<koken:if true="settings.index_featuredalbums">
+				<h1 class="featalbumtext">Featured Albums</h1>
+				<div id="featuredalbums" class="row d-flex justify-content-center flex-wrap">
+					<koken:load source="featured_albums">
+						<koken:loop>
+							<div class="col-md-4">
+								<koken:link>
+									<div class="thumbnail">
+										<koken:img size="5:3" />
+										<div class="caption">
+											<h3>
+												{{ album.title }}
+											</h3>
+											<p>
+												{{ album.description }} 
+											</p>
+										</div>
+									</div>
+								</koken:link>
+							</div>
+						</koken:loop>
+					<koken:else>
+						<koken:note>
+							No featured albums found
+						</koken:note>
+					</koken:load>
+				</div>
+			</koken:if>
+		</div>
+	</section>
+	
+<koken:include file="layouts/footer.html" />

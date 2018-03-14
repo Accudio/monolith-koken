@@ -1,0 +1,39 @@
+<koken:include file="layouts/header.html" />
+
+	<section id="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<koken:load>
+
+						<koken:head>
+							<meta property="og:site_name" content="{{ site.title }}" />
+							<meta property="og:title" content="{{ page.title strip_html='true' }}" />
+							<meta property="og:description" content="{{ page.excerpt strip_html='true' }}" />
+							<meta property="og:url" content="{{ page.url }}" />
+							<meta property="og:type" content="website" />
+							<koken:featured_image>
+							<meta property="og:image" content="{{ content.presets.medium_large.url }}" />
+							<meta property="og:image:width" content="{{ content.presets.medium_large.width }}" />
+							<meta property="og:image:height" content="{{ content.presets.medium_large.height }}" />
+							</koken:featured_image>
+						</koken:head>
+
+						<h1>
+							{{ page.title }}
+						</h1>
+						{{ page.content }}
+
+					<koken:else>
+						<koken:include file="layouts/error.html" />
+						<koken:note>
+							No page found
+						</koken:note>
+					</koken:load>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+<koken:include file="layouts/footer.html" />

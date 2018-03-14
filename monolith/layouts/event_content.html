@@ -1,0 +1,29 @@
+<koken:event_content>
+	<div class="row row-timeline">
+		<div class="col-md-4">
+			<koken:content_image>
+				<koken:link>
+					<koken:img size="8:5" />
+				</koken:link>
+			</koken:content_image>
+			<koken:content_video>
+				<koken:video />
+			</koken:content_video>
+		</div>
+		<div class="col-md-8">
+			<div class="timeline-title">
+				<h2>
+					{{ labels.content.singular }}:
+				</h2>
+			</div>
+			<h3>
+				<koken:link>
+					{{ content.title | content.filename }}
+				</koken:link>
+			</h3> 
+			<p>
+				{{ content.caption }}
+			</p>
+		</div>
+	</div>
+</koken:event_content>

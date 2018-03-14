@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Monolith Koken Theme Documentation</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/docs.css" />
+</head>
+<body class="boxed">
+  <div id="all">
+	<header id="header">
+		<div class="navbar navbar-default navbar-toggleable-sm" role="navigation">
+			<div class="navcontainer">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fa fa-bars"></i>
+					</button>
+					<a class="navbar-brand sr-only" href="#gettingstarted">
+						<h1>
+							<img class="img-fluid" src="img/logo.png" alt="Monolith Logo">
+							Monolith Koken Theme Documentation
+						</h1>
+					</a>
+				</div>
+				<div class="header-logo hidden-phone text-center">
+					<h1>
+						<a class="navbar-brand" href="#gettingstarted">
+							<img class="img-fluid" src="img/logo.png" alt="Monolith Logo">
+						</a>
+					</h1>
+				</div>
+				<div class="header-menu in collapse navbar-collapse">
+					<ul class="k-nav-list k-nav-root ">
+						<li>
+							<a href="#gettingstarted" class="slide">Getting Started</a>
+						</li>
+						<li>
+							<a href="#kokendocs" class="slide">Koken Documentation</a>
+						</li>
+						<li>
+							<a href="#themesettings" class="slide">Theme Settings</a>
+						</li>
+						<li>
+							<a href="#customcontent" class="slide">Custom Content</a>
+						</li>
+						<li>
+							<a href="#pageoptions" class="slide">Page Options</a>
+						</li>
+						<li>
+							<a href="#assembly" class="slide">Theme Assembly</a>
+						</li>
+						<li>
+							<a href="#credits" class="slide">Credit</a>
+						</li>
+						<li>
+							<a href="#support" class="slide">Further Support</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>
+						Thank you for downloading Monolith!
+					</h1>
+					<p>
+						Monolith is a bold Koken theme with extensive customisability built for photographers and artists. Based on Bootstrap 4, it has lots of styling options, on template files and text entries. If this documentation and <a href="http://koken.me" target="_blank" rel="noopener">Koken's documentation</a> do not provide the information you require, or you would like to suggest changes or features, please get in touch, our information is below under <a href="#support" class="slide">Further Support</a>.
+					</p>
+				</div>
+			</div>
+			<hr id="gettingstarted">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>
+						Getting Started
+					</h2>
+					<p>Package Contents:
+						<ul>
+							<li>
+								monolith/ &mdash; Theme folder. See below for installation.
+							</li>
+							<li>
+								monolith/documentation.html &mdash; This Documentation. Please read this for information on how to use the theme.
+							</li>
+						</ul>
+					<p>
+						This guide assumes you have a working installation of <a href="https://koken.me" target="_blank" rel="noopener">Koken</a>. If you have yet to set this up, please see the <a href="http://help.koken.me/customer/portal/articles/632102-installation" target="_blank" rel="noopener">Koken Installation Guide</a>.
+					</p>
+					<p>
+						<ol>
+							<li>
+								Upload the 'monolith' folder (in the root of this zip) to /storage/themes/ in your Koken installation using FTP or similar. (alternatively, download the zip to the /storage/themes/ folder and unzip)
+							</li>
+							<li>
+								Navigate to your Koken admin panel and to 'Site'. Click 'Themes' below the site preview.
+							</li>
+							<li>
+								Click on Monolith and 'Use Theme' button in the top left.
+							</li>
+						</ol>
+						Note: If you don't see Monolith in your themes menu, try refreshing your browser. Also make sure that monolith is in the correct location, with css, js, etc folders under /storage/themes/monolith.
+					</p>
+				</div>
+			</div>
+			<hr id="kokendocs">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>
+						Koken Documentation
+					</h2>
+					<p>
+						Koken has extensive and detailed documentation on it's operation. If you are not toally familiar with Koken, extremely good documentation and guides are available at <a href="http://help.koken.me" target="_blank" rel="noopener">help.koken.me</a>.
+					</p>
+				</div>
+			</div>
+			<hr id="themesettings">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>
+						Theme Settings
+					</h2>
+					<h3>
+						Preloader
+					</h3>
+					<p>
+						The preloader displays a white screen with loading icon until the page has fully loaded. Avoids page not looking as intended while it loads. (default: on)
+					</p>
+					<h3>
+						Full Width Layout
+					</h3>
+					<p>
+						Makes page fill width of browser window. Only affects browsers with a width > 1200px (most desktops and laptops and large tablets). For background settings, must be disabled.
+					</p>
+					<h3>
+						Site Title/Logo
+					</h3>
+					<p>
+						Set site title as:
+						<ul>
+							<li>
+								Text. Displays 'Site Title' and optionally 'Tagline' set in Koken site settings. (default)
+							</li>
+							<li>
+								Image. Display image as set in text box below. Enter URL from site root, so for 'website.com/image/logo.png' enter 'image/logo.png'. A PNG with transparency is recommended but not required.
+							</li>
+							<li>
+								 None. Will hide site title and display nav bar at top of page.
+							</li>
+						</ul>
+					</p>
+					<h3>
+						Background
+					</h3>
+					<p>
+						Set background as a repeating pattern (courtesy of <a href="http://subtlepatterns.com" target="_blank" rel="noopener">subtlepatterns</a>) or as a configurable solid colour. Only enabled with 'Full Width' disabled. (default: Photography)
+					</p>
+					<h3>
+						Colours
+					</h3>
+					<p>
+						The background colour of the header and footer, and the colour of the navigation bar and links can be configured using Koken's colour selectors.
+					</p>
+					<h3>
+						Social Sharing Buttons
+					</h3>
+					<p>
+						At the bottom of content and essay pages, social sharing buttons are displayed. Choose which buttons to enable, untick all to disable entirely.
+					</p>
+				</div>
+			</div>
+			<hr id="customcontent">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>
+						Custom Content
+					</h2>
+					<p>
+						A normal Koken installation does not integrate the ability to add custom text and headings to template files (eg, albums, essays) without editing theme files.
+					</p>
+					<p>
+						This is why Monolith includes a 'Custom Content' system on the pages:
+						<ul>
+							<li>
+								Home
+							</li>
+							<li>
+								Timeline
+							</li>
+							<li>
+								Albums
+							</li>
+							<li>
+								Contents
+							</li>
+							<li>
+								Essays
+							</li>
+							<li>
+								Sets
+							</li>
+							<li>
+								Favorites
+							</li>
+							<li>
+								Login
+							</li>
+						</ul>
+					</p>
+					<p>
+						To use Custom Content on one of these pages, create a 'Page' via the 'Text' menu, with the desired title for the template, and desired template content. Once done, <strong>take note of the 'Page ID'</strong> in the right toolbar.
+					</p>
+					<p>
+						Navigate to the page on which you want to enable custom content and enable 'Custom Content' in the Template Settings. Insert the Page ID from earlier into the Page ID text box, and wait for the preview to reload. This may take a few seconds. The title and content of the 'Page' will be inserted into that template.
+					</p>
+					<p>
+						This process onlt needs to be done once (unless Page IDs change) and you simply need to update the appropriate page to update the template.
+					</p>
+				</div>
+			</div>
+			<hr id="pageoptions">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>
+						Template Settings
+					</h2>
+					<p>
+						In addition to Custom Content, many pages have extra settings specific to that template. These are: 
+					</p>
+					<h3>
+						Home
+					</h3>
+					<p>
+						<ul>
+							<li>
+								Home Header. Set a header between the navigation bar and slideshow. Options are:
+								<ul>
+									<li>
+										None (default)
+									</li>
+									<li>
+										Welcome Header. Displays "Welcome to [site title]"
+									</li>
+									<li>
+										Custom Header. Allows custom text inserted into box below
+									</li>
+								</ul>
+							</li>
+							<li>
+								Home Slideshow. Display slideshow with featured images on homepage (default: on)
+							</li>
+							<li>
+								Home Featured Albums. Display featured albums at bottom of home page (default: on)
+							</li>
+							<li>
+								Slideshow Controls. Option to disable controls below home page slider (default: on)
+							</li>
+							<li>
+								Allow Slideshow Fullscreen. The theme includes a button to play slideshow fullscreen, this can be disabled. (default: on)
+							</li>
+						</ul>
+					</p>
+					<h3>
+						Album, Contents
+					</h3>
+					<p>
+						<ul>
+							<li>
+								Lazy Loading. Only loads visible images. Reduces initial load time but requires waiting for images to load after scrolling (default: on)
+							</li>
+						</ul>
+					</p>
+					<h3>
+						Content
+					</h3>
+					<p>
+						<ul>
+							<li>
+								Content Properties. Table displaying image properties and EXIF data. Includes:
+								<ul>
+									<li>
+										Date Captured
+									</li>
+									<li>
+										Categories
+									</li>
+									<li>
+										Tags
+									</li>
+									<li>
+										Camera Make and Model
+									</li>
+									<li>
+										Aperture
+									</li>
+									<li>
+										Exposure
+									</li>
+									<li>
+										Focal Length
+									</li>
+									<li>
+										ISO
+									</li>
+								</ul>
+								This enables or disables the entire content properties table. Individual properties can be managed below.
+							</li>
+							<li>
+								Individual Content Properties. Manage individual content properties listed (default: all enabled)
+							</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+			<hr id="assembly">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>
+						Theme Assembly
+					</h2>
+					<p>
+						Monolith uses Koken's Lens template system, outlined at <a href="http://help.koken.me/customer/portal/topics/375567-theme-development/articles" target="_blank" rel="noopener">help.koken.me</a>
+						<ul>
+							<li>
+								css/ &mdash; contains Bootstrap, Font Awesome, theme styling, and settings styling
+							</li>
+							<li>
+								fonts/ &mdash; contains Font Awesome files
+							</li>
+							<li>
+								img/ &mdash; includes optional background patterns
+							</li>
+							<li>
+								js/ &mdash; includes bootstrap, tether and theme javascript
+							</li>
+							<li>
+								layouts/ &mdash; reusable html layouts including header, footer and timeline events
+							</li>
+							<li>
+								preview.jpg &mdash; Preview image for Theme menu
+							</li>
+							<li>
+								info.json &mdash; Theme configuration and settings
+							</li>
+							<li>
+								.lens files &mdash; Templates
+							</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+			<hr id="credits">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>
+						Credits
+					</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="http://help.koken.me/customer/portal/topics/375567-theme-development/articles" target="_blank" rel="noopener">Koken Lens template system</a>
+							</li>
+							<li>
+								<a href="https://v4-alpha.getbootstrap.com/" target="_blank" rel="noopener">Bootstrap 4</a>
+							</li>
+							<li>
+								<a href="http://tether.io/" target="_blank" rel="noopener">Hubspot Tether</a>
+							</li>
+							<li>
+								<a href="http://jquery.com/" target="_blank" rel="noopener">jQuery</a>
+							</li>
+							<li>
+								<a href="http://subtlepatterns.com" target="_blank" rel="noopener">Subtle Patterns</a>
+							</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+			<hr id="support">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>
+						Further Support
+					</h2>
+					<p>
+						If this documentation and the Koken documentation does not answer your questions or you are having issues please contact us on <a href="https://github.com/Accudio/monolith-koken" target="_blank" rel="noopener">Github</a>.
+					</p>
+					<p>
+						<a href="https://accudio.com">Accudio</a> also offers theme customisation beyond existing capabilities, custom theme development, and full site development. For more info, check out our website at <a href="https://accudio.com">accudio.com</a>, or contact us on <a href="https://github.com/Accudio" target="_blank" rel="noopener">GitHub</a>, <a href="https://twitter.com/accudio" target="_blank" rel="noopener">Twitter</a>, <a href="htpps://facebook.com/accudio" target="_blank" rel="noopener">Facebook</a>, or by <a href="mailto:info@accudio.com">email</a>.
+					</p>
+					<h2>License</h2>
+					<p>
+						Copyright &copy; 2018 <a href="https://accudio.com/about/accudio/" target="_blank" rel="noopener">Alistair Shepherd</a>
+						<br />
+						This program is free software: you can redistribute it and/or modify
+						it under the terms of the GNU General Public License as published by
+						the Free Software Foundation, either version 3 of the License, or
+						(at your option) any later version.
+						<br />
+						This program is distributed in the hope that it will be useful,
+						but WITHOUT ANY WARRANTY; without even the implied warranty of
+						MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+						GNU General Public License for more details.
+						<br />
+						You should have received a copy of the GNU General Public License
+						along with this program.  If not, see &lt;<a href="http://www.gnu.org/licenses/" target="_blank" rel="noopener">http://www.gnu.org/licenses/</a>&gt;.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer id="footer">
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<p class="footer-left">Copyright &copy; <script>document.write(new Date().getFullYear())</script> <a href="https://accudio.com" target="_blank" rel="noopener">Accudio</a></p>
+					</div>
+					<div class="col-sm-6">
+						<p class="footer-right">Theme by <a href="https://accudio.com" target="_blank" rel="noopener">Accudio</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<button class="back-to-top js-back-to-top">
+		<span class="fa fa-angle-double-up"></span>
+	</button>
+	</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<koken:include file="layouts/header.html" />
+
+	<section id="main">
+		<div class="container">
+			<koken:load infinite="true">
+
+				<koken:head>
+					<meta property="og:site_name" content="{{ site.title }}" />
+					<meta property="og:title" content="{{ labels.category.plural }}" />
+					<meta property="og:description" content="{{ site.description strip_html='true' }}" />
+					<meta property="og:type" content="website" />
+					<meta property="og:url" content="{{ location.site_url }}{{ location.here }}" />
+				</koken:head>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h1>{{ labels.category.plural }}</h1>
+						<ol>
+							<koken:loop>
+								<li>
+									<koken:link>
+										{{ category.title }}
+									</koken:link>
+								</li>
+							</koken:loop>
+						</ol>
+					</div>
+				</div>
+
+			<koken:else>
+				<koken:include file="layouts/error.html" />
+				<koken:note>
+					No categories found 
+				</koken:note>
+			</koken:load>
+
+		</div>
+	</section>
+
+<koken:include file="layouts/footer.html" />
+									

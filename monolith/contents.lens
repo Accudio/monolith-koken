@@ -1,0 +1,78 @@
+<koken:include file="layouts/header.html" />
+	
+	<section id="main">
+		<div class="container">
+			<koken:load infinite="true">
+
+				<koken:head>
+					<meta property="og:site_name" content="{{ site.title }}" />
+					<meta property="og:title" content="{{ labels.content.plural }}" />
+					<meta property="og:description" content="{{ site.description strip_html='true' }}" />
+					<meta property="og:type" content="website" />
+					<koken:first>
+					<meta property="og:image" content="{{ content.presets.medium_large.url }}" />
+					<meta property="og:image:width" content="{{ content.presets.medium_large.width }}" />
+					<meta property="og:image:height" content="{{ content.presets.medium_large.height }}" />
+					</koken:first>
+					<meta property="og:url" content="{{ location.site_url }}{{ location.here }}" />
+				</koken:head>
+				
+				<div id="albumhead" class="row">
+					<div class="col-md-12">
+						<koken:if true="settings.custom_content">
+							<koken:not empty="settings.custom_pageid">
+								<koken:load source="page" filter:id="{{ settings.custom_pageid }}">
+									<h1>{{ page.title }}</h1>
+									{{ page.content }}
+								<koken:else>
+									<h1>{{ labels.content.plural }}</h1>
+									Content not found for supplied page id
+								</koken:load>
+							<koken:else>
+								<h1>{{ labels.content.plural }}</h1>
+								<koken:note>
+									For custom content, please set page id in Template Settings
+								</koken:note>
+							</koken:not>
+						<koken:else>
+							<h1>{{ labels.content.plural }}</h1>
+						</koken:if>
+					</div>
+				</div>
+
+				
+				<div id="albums" class="row">
+					<koken:loop>
+						<div class="col-md-4">
+							<koken:link>
+								<div class="thumbnail">
+									<div class="imgwrap">
+										<koken:if true="settings.lazy_toggle">
+											<koken:img size="5:3" lazy="true" />
+										<koken:else>
+											<koken:img size="5:3" lazy="false" />
+										</koken:if>
+										<div class="loadwrap"><div class="loaderpos"><i class="fa fa-refresh fa-spin"></i></div></div>
+									</div>
+									<div class="caption">
+										<h3>
+											{{ content.title | content.filename }}
+										</h3>
+									</div>
+								</div>
+							</koken:link>
+						</div>
+					</koken:loop>
+				</div>
+
+			<koken:else>
+				<koken:include file="layouts/error.html" />
+				<koken:note>
+					No images or videos found
+				</koken:note>
+			</koken:load>
+
+		</div>
+	</section>
+
+<koken:include file="layouts/footer.html" />

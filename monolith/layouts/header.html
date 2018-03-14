@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<koken:meta />
+	<koken:title />
+	<koken:asset file="css/bootstrap.min.css" />
+	<koken:asset file="css/style.css" />
+	<koken:asset file="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+	<koken:settings />
+</head>
+<body class="{{ settings.full_width }}">
+	<koken:if true="settings.preloader">
+		<div class="preloader"> 
+			<i class="fa fa-spinner fa-pulse"></i>
+		</div>
+	</koken:if>
+  <div id="all">
+	
+	<!-- Header Start -->
+	<header id="header">
+	
+		<!-- Menu & Logo -->
+		<div class="navbar navbar-default navbar-toggleable-sm" role="navigation">
+			<div class="navcontainer">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fa fa-bars"></i>
+					</button>
+					<a class="navbar-brand sr-only" href="/">
+						<h1>
+							<img class="img-fluid" src="{{ location.root_folder }}/{{ settings.titleimage_url }}" alt="{{ site.title }} Logo">
+							{{ site.title }}
+						</h1>
+					</a>
+				</div>
+				<koken:if data="settings.site_title" equals="image">
+					<div class="header-logo hidden-phone text-center">
+						<h1>
+							<a class="navbar-brand" href="/">
+								<img class="img-fluid" src="{{ location.root_folder }}/{{ settings.titleimage_url }}" alt="{{ site.title }} Logo">
+							</a>
+						</h1>
+					</div>
+				</koken:if>
+				<koken:if data="settings.site_title" equals="text">
+					<div class="header-text hidden-phone text-center">
+						<h1>
+							<a class="" href="/">
+								{{ site.title }}
+							</a>
+						</h1>
+						<koken:if true="settings.show_tagline">
+							<h2>
+								{{ site.tagline }}
+							</h2>
+						</koken:if>
+					</div>
+				</koken:if>
+				<div class="header-menu in collapse navbar-collapse">
+					<koken:navigation />
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Header End -->

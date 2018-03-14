@@ -1,0 +1,70 @@
+<koken:include file="layouts/header.html" />
+
+	<section id="main">
+		<div class="container">
+			<koken:load limit="10" infinite="true">
+					<div class="row">
+						<div class="col-md-12">
+							<article>
+								<div class="heading">
+									<h1>
+										{{ essay.title }}
+									</h1>
+									<koken:tags>
+										<span>
+											<strong>{{ labels.tag.plural }}:</strong> 
+											<koken:loop separator=" ">
+												<koken:link>
+													#{{ tag.title }}
+												</koken:link>
+											</koken:loop> | 
+										</span>
+									</koken:tags>
+									<koken:categories>
+										<span>
+											<strong>{{ labels.category.singular }}:</strong> 
+											<koken:loop separator=", ">
+												<koken:link>
+													{{ category.title }}
+												</koken:link>
+											</koken:loop> | 
+										</span>
+									</koken:categories>
+									<span>
+										<koken:link to="archive">
+											<koken:time />
+										</koken:link> | 
+									</span>
+									<span>
+										{{ profile.name }}
+									</span>
+								</div>
+								{{ essay.content paragraphs="true" }}
+							</article>
+							<koken:if true="settings.social_twitter">
+								<koken:link share="twitter" class="btn-social btn-twitter"><i class="fa fa-twitter"></i>Tweet</koken:link>
+							</koken:if>
+							<koken:if true="settings.social_facebook">
+								<koken:link share="facebook" class="btn-social btn-facebook"><i class="fa fa-facebook-official"></i>Share</koken:link>
+							</koken:if>
+							<koken:if true="settings.social_pinterest">
+								<koken:link share="pinterest" class="btn-social btn-pinterest"><i class="fa fa-pinterest"></i>Save</koken:link>
+							</koken:if>
+							<koken:if true="settings.social_googleplus">
+								<koken:link share="google-plus" class="btn-social btn-google-plus"><i class="fa fa-google-plus"></i>Share</koken:link>
+							</koken:if>
+							<koken:if true="settings.social_tumblr">
+								<koken:link share="tumblr" class="btn-social btn-tumblr"><i class="fa fa-tumblr"></i>Share</koken:link>
+							</koken:if>
+						</div>
+					</div>
+			<koken:else>
+				<koken:include file="layouts/error.html" />
+				<koken:note>
+					No published essay found 
+				</koken:note>
+			</koken:load>
+		</div>
+	</section>
+
+<koken:include file="layouts/footer.html" />

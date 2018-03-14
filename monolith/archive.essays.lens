@@ -1,0 +1,65 @@
+<koken:include file="layouts/header.html" />
+
+	<section id="main">
+		<div class="container">
+
+			<koken:breadcrumbs />
+			<div class="row">
+				<div class="col-md-12">
+					<h1>
+						<koken:if data="archive.type" equals="date">
+							All {{ labels.essay.plural }} from {{ archive.title }}
+						</koken:if>
+						<koken:if data="archive.type" equals="tag">
+							All {{ labels.essay.plural }} assigned the {{ archive.type.singular }} #{{ archive.title }}
+						</koken:if> 
+						<koken:if data="archive.type" equals="category">
+							All {{ labels.essay.plural }} assigned in the {{ archive.type.singular }} {{ archive.title }}
+						</koken:if>
+					</h1>
+				</div>
+			</div>
+
+			<koken:load limit="10" infinite="true">
+
+				<koken:loop>
+					<div class="row">
+						<div class="col-md-12">
+							<hr>
+							<article>
+								<div class="heading">
+									<h1>
+										<koken:link>
+											{{ essay.title }}
+										</koken:link>
+									</h1>
+									<span>
+										<koken:link to="archive">
+											<koken:time />
+										</koken:link> | 
+									</span>
+									<span>
+										{{ profile.name }}
+									</span>
+								</div>
+								<p>{{ essay.excerpt }}</p>
+								<p>
+									<koken:link title="{{ essay.title }}">Read More...</koken:link>
+								</p>
+							</article>
+						</div>
+					</div>
+				</koken:loop>
+
+			<koken:else>
+				<koken:include file="layouts/error.html" />
+				<koken:note>
+					No published essays found
+				</koken:note>
+			</koken:load>
+			
+		</div>
+	</section>
+
+<koken:include file="layouts/footer.html" />
+									

@@ -1,0 +1,344 @@
+{
+  "name": "Monolith Koken Theme",
+  "version": "1.0",
+  "description": "Bold responsive Koken theme built for photographers and artists using Bootstrap 4",
+  "author": {
+    "name": "Accudio",
+    "link": "https://accudio.com/development/koken"
+  },
+  "templates": {
+    "login": {
+      "name": "Login",
+      "description": "Login page for Content Protection Plugin"
+    }
+  },
+  "settings": {
+    "Layout": {
+      "icon":"layout",
+      "settings": {
+        "preloader": {
+          "label": "Preloader",
+          "type": "boolean",
+          "note": "Site preloader displays full page loading screen until page has fully loaded",
+          "value": "true"
+        },
+        "full_width": {
+          "label": "Full Width Layout",
+          "type": "boolean",
+          "note": "If full width layout enabled, background options will be hidden",
+          "values": {
+            "true": "fullwidth",
+            "false": "boxed"
+          },
+          "value": "boxed"
+        },
+        "site_title": {
+          "label": "Site Title/Logo",
+          "type": "select",
+          "note": "Set site title as text, image, or hidden",
+          "options": [
+            { "label":"Text", "value":"text"},
+            { "label":"Image", "value":"image"},
+            { "label":"None", "value":"none"}
+          ],
+          "value": "text"
+        },
+        "titleimage_url": {
+          "label": "Title Image URL",
+          "type": "string",
+          "note": "URL of image from root of site (eg. enter 'folder/logo.jpg' for 'example.com/folder/logo.jpg')",
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [
+              {
+                "option": "site_title",
+                "equals": "image"
+              }
+            ]
+          }
+        },
+        "show_tagline": {
+          "label": "Show Tagline",
+          "type": "boolean",
+          "note": "Display site tagline underneath site title",
+          "value": "true",
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [
+              {
+                "option": "site_title",
+                "equals": "text"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Background": {
+      "icon": "theme",
+      "settings": {
+        "background_pattern": {
+          "label": "Background",
+          "type": "select",
+          "note": "Set background of site as repeating pattern or colid colour",
+          "options": [
+            { "label":"Custom Colour", "value":"none"},
+            { "label":"Cream Dust", "value":"url(img/cream_dust.png)"},
+            { "label":"Crossword", "value":"url(img/crossword.png)"},
+            { "label":"Light Sketch", "value":"url(img/light_sketch.png)"},
+            { "label":"Photography", "value":"url(img/photography.png)"},
+            { "label":"Subtle Zebra", "value":"url(img/subtle_zebra.png)"},
+            { "label":"White Wall", "value":"url(img/white_wall.png)"}
+          ],
+          "value": "url(img/photography.png)",
+          "reload_preview": true,
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [
+              {
+                "option": "full_width",
+                "equals": false
+              }
+            ]
+          }
+        },
+        "background_colour": {
+          "label": "Custom Background Colour",
+          "type": "color",
+          "value": "#fafafa",
+          "reload_preview": true,
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [
+              {
+                "option": "full_width",
+                "equals": false
+              },
+              {
+                "option": "background_pattern",
+                "equals": "none"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Colour": {
+      "icon": "color",
+      "settings": {
+        "theme_colour": {
+          "label": "Theme Colour",
+          "type": "color",
+          "note": "Background colour of site header and footer",
+          "value": "#201E1F"
+        },
+        "themetext_colour": {
+          "label": "Theme Text Colour",
+          "type": "color",
+          "note": "Colour of text in site header and footer",
+          "value": "#ffffff"
+        },
+        "link_colour": {
+          "label": "Link Colour",
+          "type": "color",
+          "note": "Colour of links on site",
+          "value": "#3a7e8e"
+        },
+        "navactive_colour": {
+          "label": "Active Navigation Colour",
+          "type": "color",
+          "note": "Colour of active/hover in site navigation bar",
+          "value": "#fbfbfb"
+        },
+        "navactiveborder_colour": {
+          "label": "Active Navigation Border Colour",
+          "type": "color",
+          "note": "Colour of border at the top of active/hover navigation",
+          "value": "#dddddd"
+        }
+      }
+    },
+    "Social": {
+      "icon": "social",
+      "settings": {
+        "social_twitter": {
+          "label": "Twitter 'Tweet'",
+          "type": "boolean",
+          "value": true
+        },
+        "social_facebook": {
+          "label": "Facebook 'Share'",
+          "type": "boolean",
+          "value": true
+        },
+        "social_pinterest": {
+          "label": "Pinterest 'Save'",
+          "type": "boolean",
+          "value": true
+        },
+        "social_googleplus": {
+          "label": "Google+ 'Share'",
+          "type": "boolean",
+          "value": true
+        },
+        "social_tumblr": {
+          "label": "Tumblr 'Share'",
+          "type": "boolean",
+          "value": true
+        }
+      }
+    },
+    "Template Settings": {
+      "icon": "page",
+      "settings": {
+        "index_header": {
+          "label": "Home Header",
+          "type": "select",
+          "note": "Display welcome header, custom header, or hide",
+          "options": [
+            { "label":"Welcome Header", "value":"welcome"},
+            { "label":"Custom Header", "value":"custom"},
+            { "label":"None", "value":"none"}
+          ],
+          "value": "none",
+          "scope": [ "index" ]
+        },
+        "index_customheader": {
+          "label": "Custom Home Header Text",
+          "type": "string",
+          "note": "Enter text for custom site header",
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [
+              {
+                "option": "index_header",
+                "equals": "custom"
+              }
+            ]
+          },
+          "value": "",
+          "reload_preview": true,
+          "scope": [ "index" ]
+        },
+        "index_slideshow": {
+          "label": "Home Slideshow",
+          "type": "boolean",
+          "note": "Display featured content slideshow on home",
+          "value": true,
+          "scope": [ "index" ]
+        },
+        "custom_content": {
+          "label": "Custom Content",
+          "type": "boolean",
+          "note": "Display custom content on page selected page",
+          "value": false,
+          "scope": [ "index", "albums", "contents", "essays", "timeline", "sets", "favorites", "login" ],
+          "scoped_values": true
+        },
+        "custom_pageid": {
+          "label": "Custom Content Page ID",
+          "type": "string",
+          "note": "Enter page ID to pull and display content for page",
+          "reload_preview": true,
+          "value": "",
+          "scope": [ "index", "albums", "contents", "essays", "timeline", "sets", "favorites", "login" ],
+          "scoped_values": true,
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [
+              {
+                "option": "custom_content",
+                "equals": true
+              }
+            ]
+          }
+        },
+        "index_featuredalbums": {
+          "label": "Home Featured Albums",
+          "type": "boolean",
+          "note": "Display featured albums on home",
+          "value": true,
+          "scope": [ "index" ]
+        },
+        "lazy_toggle": {
+          "label": "Lazy Loading",
+          "type": "boolean",
+          "note": "Waits until the user scrolls before loading images further down the page. Reduces initial load time",
+          "value": true,
+          "scope": [ "album", "contents" ],
+          "scoped_values": true
+        },
+        "content_properties": {
+          "label": "Show Content Properties Section",
+          "type": "boolean",
+          "note": "Enable to show the properties section for ALL content. In preview, properties table does not display correctly, however does in Live panel and published site",
+          "value": true,
+          "scope": [ "content" ]
+        }
+      }
+    },
+    "Slideshow": {
+      "icon": "slideshow",
+      "scope": [ "index" ],
+      "settings": {
+        "slideshow_controls": {
+          "label": "Slideshow controls",
+          "type": "boolean",
+          "note": "Display slideshow controls. Includes previous, play/pause, next and if applicable fullscreen (see below)",
+          "value": true
+        },
+        "slideshow_fullscreen": {
+          "label": "Allow Slideshow Fullscreen",
+          "type": "boolean",
+          "value": true
+        }
+      }
+    },
+    "Content Properties": {
+      "icon": "source",
+      "scope": [ "content" ],
+      "settings": {
+        "content_datecaptured": {
+          "label": "Date Captured",
+          "type": "boolean",
+          "value": true
+        },
+        "content_categories": {
+          "label": "Categories",
+          "type": "boolean",
+          "value": true
+        },
+        "content_tags": {
+          "label": "Tags",
+          "type": "boolean",
+          "value": true
+        },
+        "content_model": {
+          "label": "Camera Model",
+          "type": "boolean",
+          "value": true
+        },
+        "content_aperture": {
+          "label": "Aperture",
+          "type": "boolean",
+          "value": true
+        },
+        "content_exposure": {
+          "label": "Exposure",
+          "type": "boolean",
+          "value": true
+        },
+        "content_focallength": {
+          "label": "Focal Length",
+          "type": "boolean",
+          "value": true
+        },
+        "content_iso": {
+          "label": "ISO",
+          "type": "boolean",
+          "value": true
+        }
+      }
+    }
+  }
+}
