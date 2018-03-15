@@ -1,4 +1,5 @@
 # Monolith Koken Theme - based on Bootstrap 4
+[![GitHub](https://img.shields.io/badge/GitHub-Accudio-0366d6.svg)](https://github.com/Accudio) [![Twitter](https://img.shields.io/badge/Twitter-@accudio-1DA1F2.svg)](https://twitter.com/accudio) [![Website](https://img.shields.io/badge/Website-accudio.com-4B86AF.svg)](https://accudio.com) [![Donate](https://img.shields.io/badge/Donate-Paypal-009cde.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=alistair.shepherd@hotmail.co.uk&item_name=Supporting+open+source+projects+by+Alistair+Shepherd&currency_code=GBP)
 
 Monolith is a bold Koken theme with extensive customisability built for photographers and artists. Based on Bootstrap 4, it has lots of styling options, on template files and text entries. If this documentation and [Koken's documentation](http://koken.me/) do not provide the information you require, or you would like to suggest changes or features, please get in touch, our information is below under Further Support.
 
