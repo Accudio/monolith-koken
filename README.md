@@ -4,16 +4,13 @@
 Monolith is a bold Koken theme with extensive customisability built for photographers and artists. Based on Bootstrap 4, it has lots of styling options, on template files and text entries. If this documentation and [Koken's documentation](http://koken.me/) do not provide the information you require, or you would like to suggest changes or features, please get in touch, our information is below under Further Support.
 
 ## Getting Started
-Package Contents:
+This guide assumes you have a working installation of Koken. If you have yet to set this up, please see the [Koken Installation](http://help.koken.me/customer/portal/articles/632102-installation) Guide. For advanced users it is suggested to ```git clone``` in /storage/themes/ to stay up to date with changes to the theme. Alternatively, you can follow the instrcutions below:
 
-* monolith/ — Theme folder. See below for installation.
-* monolith/documentation.html — This Documentation. Please read this for information on how to use the theme.
-
-This guide assumes you have a working installation of Koken. If you have yet to set this up, please see the [Koken Installation](http://help.koken.me/customer/portal/articles/632102-installation) Guide.
-
-1. Upload the 'monolith' folder (in the root of this zip) to /storage/themes/ in your Koken installation using FTP or similar. (alternatively, download the zip to the /storage/themes/ folder and unzip)
-2. Navigate to your Koken admin panel and to 'Site'. Click 'Themes' below the site preview.
-3. Click on Monolith and 'Use Theme' button in the top left.
+1. Download the latest release zip file: ```wget https://github.com/Accudio/monolith-koken/releases/download/v1.1.0/monolith-koken-v1.1.0.zip```
+2. Extract the zip in the /storage/themes/ directory: ```unzip monolith-koken-v1.1.0.zip```.
+3. Ensure ```themes/``` includes the folder ```monolith```.
+4. Navigate to your Koken admin panel and to 'Site'. Click 'Themes' below the site preview.
+5. Click on Monolith and 'Use Theme' button in the top left.
 
 Note: If you don't see Monolith in your themes menu, try refreshing your browser. Also make sure that monolith is in the correct location, with css, js, etc folders under /storage/themes/monolith.
 
