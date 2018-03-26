@@ -3,6 +3,9 @@
 
 Monolith is a bold Koken theme with extensive customisability built for photographers and artists. Based on Bootstrap 4, it has lots of styling options, on template files and text entries. If this documentation and [Koken's documentation](http://koken.me/) do not provide the information you require, or you would like to suggest changes or features, please get in touch, our information is below under Further Support.
 
+## Demo
+You can find a demo of the theme at [theme.accudio.com/koken/monolith](https://theme.accudio.com/koken/monolith).
+
 ## Getting Started
 This guide assumes you have a working installation of Koken. If you have yet to set this up, please see the [Koken Installation](http://help.koken.me/customer/portal/articles/632102-installation) Guide. For advanced users it is suggested to ```git clone``` in /storage/themes/ to stay up to date with changes to the theme. Alternatively, you can follow the instrcutions below:
 
