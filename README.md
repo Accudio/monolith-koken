@@ -9,8 +9,8 @@ You can find a demo of the theme at [theme.accudio.com/koken/monolith](https://t
 ## Getting Started
 This guide assumes you have a working installation of Koken. If you have yet to set this up, please see the [Koken Installation](http://help.koken.me/customer/portal/articles/632102-installation) Guide. For advanced users it is suggested to ```git clone``` in /storage/themes/ to stay up to date with changes to the theme. Alternatively, you can follow the instrcutions below:
 
-1. Download the latest release zip file: ```wget https://github.com/Accudio/monolith-koken/releases/download/v1.1.0/monolith-koken-v1.1.0.zip```
-2. Extract the zip in the /storage/themes/ directory: ```unzip monolith-koken-v1.1.0.zip```.
+1. Download the latest release zip file: ```wget https://github.com/Accudio/monolith-koken/releases/download/v1.1.1/monolith-koken-v1.1.1.zip```
+2. Extract the zip in the /storage/themes/ directory: ```unzip monolith-koken-v1.1.1.zip```.
 3. Ensure ```themes/``` includes the folder ```monolith```.
 4. Navigate to your Koken admin panel and to 'Site'. Click 'Themes' below the site preview.
 5. Click on Monolith and 'Use Theme' button in the top left.
