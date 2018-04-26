@@ -2,7 +2,12 @@
 
 	<section id="main">
 		<div class="container">
-			<koken:load limit="10" infinite="true">
+			<koken:load limit="10" infinite="true">				
+				<koken:if true="settings.show_breadcrumbs">
+					<div class="breadcrumbs">
+						<koken:breadcrumbs separator="/" show_if_single="false" />
+					</div>
+				</koken:if>
 					<div class="row">
 						<div class="col-md-12">
 							<article>

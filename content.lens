@@ -14,7 +14,12 @@
 					<meta property="og:image:height" content="{{ content.presets.medium_large.height }}" />
 					<meta property="og:url" content="{{ content.url }}" />
 				</koken:head>
-
+				
+				<koken:if true="settings.show_breadcrumbs">
+					<div class="breadcrumbs">
+						<koken:breadcrumbs separator="/" show_if_single="false" />
+					</div>
+				</koken:if>
 				<div class="row">
 					<div class="col-sm-8">
 						<koken:link lightbox="true" title="View in lightbox">

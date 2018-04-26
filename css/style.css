@@ -46,6 +46,7 @@ section .title h2 {background: #f3f3f3;padding: 0.9375rem;font-size: 1.5rem;font
 .ruleright {border-right:0.0625rem solid #eee;}
 /* Display dividing lines correctly in Koken Admin Panel */
 .home .container>i:last-child>.row {border-bottom: none;}
+.breadcrumbs { margin-bottom: 1rem; }
 @media (min-width: 768px) {
 	.back-to-top {right: 1.875rem;bottom: 2.5rem;}
 }

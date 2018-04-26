@@ -11,8 +11,12 @@
 					<meta property="og:type" content="website" />
 					<meta property="og:url" content="{{ location.site_url }}{{ location.here }}" />
 				</koken:head>
-
-				<koken:breadcrumbs />
+				
+				<koken:if true="settings.show_breadcrumbs">
+					<div class="breadcrumbs">
+						<koken:breadcrumbs separator="/" show_if_single="false" />
+					</div>
+				</koken:if>
 				<div class="row">
 					<div class="col-md-12">
 						<h1>All content in category: {{ event.title }}</h1>
