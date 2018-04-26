@@ -71,6 +71,12 @@
               }
             ]
           }
+        },
+        "show_breadcrumbs": {
+          "label": "Show Breadcrumbs",
+          "type": "boolean",
+          "note": "Display Breadcrumbs on all sub-pages to enhance navigation",
+          "value": "false"
         }
       }
     },

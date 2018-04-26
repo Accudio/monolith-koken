@@ -38,19 +38,24 @@ $(function() {
 		}, 'fast');
 	})
 
-
 	// Changes Facebook, Twitter and Google plus links to Icons
-	var fbnav = document.querySelector('[title="Facebook"]');
-	fbnav.innerHTML = '<i class="fa fa-facebook-official"></i><span class="sr-only">Facebook</span>'
-	fbnav.title = 'Facebook'
-	fbnav.target = '_blank'
-	var twnav = document.querySelector('[title="Twitter"]');
-	twnav.innerHTML = '<i class="fa fa-twitter"></i><span class="sr-only">Twitter</span>'
-	twnav.title = 'Twitter'
-	twnav.target = '_blank'
-	var gpnav = document.querySelector('[title="Google+"]');
-	gpnav.innerHTML = '<i class="fa fa-google-plus"></i><span class="sr-only">Google+</span>'
-	gpnav.title = 'Google+'
-	gpnav.target = '_blank'
+	if ( document.querySelector('[title="Facebook"]') ) {
+		var fbnav = document.querySelector('[title="Facebook"]');
+		fbnav.innerHTML = '<i class="fa fa-facebook-official"></i><span class="sr-only">Facebook</span>'
+		fbnav.title = 'Facebook'
+		fbnav.target = '_blank'
+	};
+	if ( document.querySelector('[title="Twitter"]') ) {
+		var twnav = document.querySelector('[title="Twitter"]');
+		twnav.innerHTML = '<i class="fa fa-twitter"></i><span class="sr-only">Twitter</span>'
+		twnav.title = 'Twitter'
+		twnav.target = '_blank'
+	};
+	if ( document.querySelector('[title="Google+"]') ) {
+		var gpnav = document.querySelector('[title="Google+"]');
+		gpnav.innerHTML = '<i class="fa fa-google-plus"></i><span class="sr-only">Google+</span>'
+		gpnav.title = 'Google+'
+		gpnav.target = '_blank'
+	};
 });
 

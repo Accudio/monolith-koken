@@ -16,7 +16,12 @@
 					<meta property="og:image:height" content="{{ content.presets.medium_large.height }}" />
 					</koken:shift></koken:covers>
 				</koken:head>
-
+				
+				<koken:if true="settings.show_breadcrumbs">
+					<div class="breadcrumbs">
+						<koken:breadcrumbs separator="/" show_if_single="false" />
+					</div>
+				</koken:if>
 				<div id="albumhead" class="row">
 					<div class="col-md-12">
 						<div class="heading">
